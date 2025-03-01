@@ -20,8 +20,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
+  padding: 20px;
 }
 
 .App-link {
@@ -35,4 +36,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #4fa8c6;
+}
+
+input[type="file"] {
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  color: #282c34;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #61dafb;
 }

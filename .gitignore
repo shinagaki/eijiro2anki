@@ -7,9 +7,12 @@
 
 # testing
 /coverage
+/src/test-data*.txt
+/test-data*.txt
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store

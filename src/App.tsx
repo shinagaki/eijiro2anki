@@ -247,11 +247,11 @@ function App() {
         {isProcessing && (
           <div>
             <p>処理中...</p>
-            <p style={{ fontSize: '0.9em', color: '#61dafb' }}>{progress}</p>
+            <p className="progress">{progress}</p>
           </div>
         )}
         {entries.length > 0 && !isProcessing && (
-          <div>
+          <div className="result">
             <p>{entries.length.toLocaleString()}件のエントリーが読み込まれました</p>
             <button type="button" onClick={downloadCsv}>CSVをダウンロード</button>
           </div>

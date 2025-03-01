@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
 }
 
 .App-logo {
@@ -14,15 +18,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 1vmin);
-  color: white;
-  padding: 20px;
 }
 
 .App-link {
@@ -38,33 +38,40 @@
   }
 }
 
+h1 {
+  margin-bottom: 2rem;
+}
+
+input[type="file"] {
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #666;
+  color: white;
+}
+
 button {
   background-color: #61dafb;
-  border: none;
   color: #282c34;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
   border-radius: 4px;
-  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
 button:hover {
   background-color: #4fa8c6;
 }
 
-input[type="file"] {
-  background-color: white;
-  padding: 10px;
-  border-radius: 4px;
-  color: #282c34;
+.progress {
+  color: #61dafb;
+  font-size: 0.9em;
+  margin-top: 1rem;
 }
 
-h1 {
-  margin-bottom: 2rem;
-  color: #61dafb;
+.result {
+  margin-top: 2rem;
+  font-size: 1.1rem;
 }

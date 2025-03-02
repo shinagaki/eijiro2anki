@@ -72,18 +72,14 @@ function App() {
     // メタ情報を抽出
     const levelMatch = metaLine.match(/【レベル】(\d+)/);
     const pronunciationMatch = metaLine.match(/【発音】(.*?)(?:、|$)/);
-    const kanaMatch = metaLine.match(/【＠】(.*?)(?:【|$)/);
     const conjugationMatch = metaLine.match(/【変化】(.*?)(?:、|$)/);
     const segmentationMatch = metaLine.match(/【分節】(.*?)(?:、|$)/);
 
     if (!levelMatch) return null;
 
-    // カタカナ発音の抽出を改善
-    let kana = '';
-    const kanaSection = metaLine.match(/【＠】(.*?)(?:【|$)/);
-    if (kanaSection) {
-      kana = kanaSection[1].trim();
-    }
+    // カタカナ発音の抽出（最後の「、」は除去）
+    const kanaMatch = metaLine.match(/【＠】(.*?)(?:【|$)/);
+    const kana = kanaMatch ? kanaMatch[1].replace(/、$/, '') : '';
 
     const metaInfo = {
       level: levelMatch[1],
